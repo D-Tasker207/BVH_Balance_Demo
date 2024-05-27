@@ -1,0 +1,48 @@
+/*
+Node1
+ Node2
+  Node4
+   Circle(Point(-3.5, 0), 0.5)
+   Circle(Point(-2, 0), 0.5)
+  Node5
+   Circle(Point(-2, 2), 0.5)
+ Node3
+  Node6
+   Circle(Point(-2, -2), 0.5)
+  Node7
+   Circle(Point(3, -1), 0.5)
+   Circle(Point(3, 1), 0.5)
+*/
+
+graph {
+    Node1 [xlabel=0, shape=circle]
+    Node2 [xlabel=0, shape=circle]
+    Node3 [xlabel=0, shape=circle]
+    Node4 [xlabel=0, shape=circle]
+    Node5 [xlabel=1, shape=circle]
+    Node6 [xlabel=1, shape=circle]
+    Node7 [xlabel=0, shape=circle]
+    "(3, -1)" [xlabel=0, shape=circle]
+    "(3, 1)" [xlabel=0, shape=circle]
+    "(-2, -2)" [xlabel=0, shape=circle]
+    "(-3.5, 0)" [xlabel=0, shape=circle]
+    "(-2, 0)" [xlabel=0, shape=circle]
+    "(-2, 2)" [xlabel=0, shape=circle]
+    Node5Right [shape=point]
+    Node6Right [shape=point];
+    
+    Node1 -- Node2; 
+    Node1 -- Node3;
+    Node2 -- Node4;
+    Node2 -- Node5;
+    Node3 -- Node6;
+    Node3 -- Node7;
+    Node4 -- "(-3.5, 0)";
+    Node4 -- "(-2, 0)";
+    Node5 -- "(-2, 2)";
+    Node5 -- Node5Right;
+    Node6 -- "(-2, -2)";
+    Node6 -- Node6Right;
+    Node7 -- "(3, 1)";
+    Node7 -- "(3, -1)";
+}
