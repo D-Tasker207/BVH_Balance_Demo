@@ -8,8 +8,6 @@ from circle import Circle
 from line_segment import LineSegment
 from bvh_node import BVHNode
 
-USE_MIDPOINT = True
-
 def cast_rays(light_source: Point, bvh: BVHNode, num_rays: int = 360) -> tuple[list[Ray], list[Point]]:
     rays = []
     intersections = []
